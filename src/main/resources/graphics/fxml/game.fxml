@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+
+<AnchorPane maxHeight="600.0" maxWidth="1150.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.window.game.ControllerGame">
+    <children>
+        <ListView fx:id="listView" maxHeight="600.0" minHeight="600.0" prefHeight="600.0" prefWidth="450.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <Pane fx:id="board" prefHeight="600.0" prefWidth="700.0" styleClass="board" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane fx:id="notificationPopup" layoutX="178.0" layoutY="262.0" prefHeight="76.0" prefWidth="344.0" style="-fx-background-radius: 40px; -fx-background-color: white;">
+                    <children>
+                        <Label fx:id="notificationLabel" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="27.0" layoutY="3.0" prefHeight="70.0" prefWidth="291.0" text="Select the shape and move it here to the board" textAlignment="CENTER" wrapText="true">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#ababab" height="120.51" radius="63.6425" spread="0.52" width="136.06" />
+                    </effect>
+                </Pane>
+                <Label fx:id="timeLabel" layoutX="332.0" layoutY="565.0" text="00:00" />
+            </children>
+        </Pane>
+        <Pane fx:id="moveMenuBody" layoutX="626.0" layoutY="20.0" prefHeight="70.0" prefWidth="221.0" styleClass="button-menu" visible="false" AnchorPane.rightAnchor="214.0" AnchorPane.topAnchor="15.0">
+            <children>
+                <Button layoutX="83.0" layoutY="3.0" maxHeight="30.0" maxWidth="80.0" minHeight="65.0" minWidth="60.0" mnemonicParsing="false" onAction="#insertToBoard" prefHeight="65.0" prefWidth="65.0" text="Board" />
+                <Button layoutX="153.0" layoutY="3.0" maxHeight="30.0" maxWidth="80.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#insertToMenu" prefHeight="65.0" prefWidth="65.0" text="Menu" />
+            </children>
+        </Pane>
+        <ToggleButton fx:id="buttonMoveMenu" layoutX="621.0" layoutY="14.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" styleClass="circle-button-white" text="Move" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="15.0" />
+        <Pane fx:id="gameMenuBody" layoutX="715.0" layoutY="615.0" prefHeight="70.0" prefWidth="221.0" styleClass="button-menu" visible="false" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="214.0">
+            <children>
+                <Button layoutX="83.0" layoutY="3.0" maxHeight="30.0" maxWidth="80.0" minHeight="65.0" minWidth="60.0" mnemonicParsing="false" onAction="#newGame" prefHeight="65.0" prefWidth="65.0" text="New" />
+                <Button layoutX="153.0" layoutY="3.0" maxHeight="30.0" maxWidth="80.0" minHeight="65.0" minWidth="65.0" mnemonicParsing="false" onAction="#exitApp" prefHeight="65.0" prefWidth="65.0" text="Exit" />
+            </children>
+        </Pane>
+        <ToggleButton fx:id="buttonGameMenu" layoutX="715.0" layoutY="615.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" styleClass="circle-button-white" text="Game" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="365.0" />
+        <Button fx:id="buttonNextGame" layoutX="369.0" layoutY="307.0" mnemonicParsing="false" onAction="#playNext" styleClass="circle-button-white" text="Next" visible="false" />
+        <Button fx:id="buttonGameAgain" layoutX="261.0" layoutY="307.0" mnemonicParsing="false" onAction="#playAgain" styleClass="circle-button-white" text="Again" visible="false" />
+        <Label fx:id="labelPerfect" alignment="CENTER" layoutX="195.0" layoutY="207.0" text="PERFECT" textFill="WHITE" textOverrun="LEADING_ELLIPSIS" visible="false">
+            <effect>
+                <InnerShadow blurType="ONE_PASS_BOX" height="25.0" radius="5.75" width="0.0" />
+            </effect>
+            <font>
+                <Font name="System Bold" size="76.0" />
+            </font>
+        </Label>
+      <Label fx:id="labelNotBad" alignment="CENTER" layoutX="180.0" layoutY="207.0" text="NOT BAD" textFill="WHITE" textOverrun="LEADING_ELLIPSIS" visible="false">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" height="25.0" radius="5.75" width="0.0" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="76.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelBrilliant" alignment="CENTER" layoutX="122.0" layoutY="207.0" prefHeight="111.0" prefWidth="456.0" text="BRILLIANT" textFill="WHITE" textOverrun="LEADING_ELLIPSIS" visible="false">
+         <effect>
+            <InnerShadow blurType="ONE_PASS_BOX" height="25.0" radius="5.75" width="0.0" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="76.0" />
+         </font>
+      </Label>
+    </children>
+    <stylesheets>
+        <URL value="@/graphics/css/buttons.css" />
+        <URL value="@/graphics/css/scrollbar.css" />
+        <URL value="@/graphics/css/game-listview.css" />
+    </stylesheets>
+</AnchorPane>

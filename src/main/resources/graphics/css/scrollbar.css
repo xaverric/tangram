@@ -1,0 +1,40 @@
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 2em;
+}
+
+.track-background {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 2em;
+}
+
+.thumb {
+    -fx-background-color: rgb(93, 93, 93);
+    -fx-background-radius: 2em;
+}
+
+.thumb:hover {
+    -fx-background-color: rgb(110, 110, 110);
+}
+
+.thumb:pressed {
+    -fx-background-color: rgb(130, 130, 130);
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-insets: 4 0 4 0;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-insets: 0 4 0 4;
+}
+
+.increment-arrow, .decrement-arrow {
+    -fx-background-color: transparent;
+}

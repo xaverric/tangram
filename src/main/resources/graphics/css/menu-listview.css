@@ -1,0 +1,11 @@
+.list-cell, .list-view {
+    -fx-background-color: white;
+}
+
+.list-cell {
+    -fx-pref-width: 250px;
+}
+
+.tab-pane .list-cell:selected {
+    -fx-background-color: #0077CC;
+}

@@ -1,0 +1,60 @@
+/*
+    Main game window components
+*/
+.toggle-button {
+    -fx-border-color: white;
+    -fx-background-color: transparent;
+    -fx-border-radius: 60px;
+    -fx-border-width: 2px;
+    -fx-text-fill: white;
+}
+
+.toggle-button:selected {
+    -fx-border-color: #0077CC;
+    -fx-text-fill: #0077CC;
+}
+
+/* Default button transparent skin */
+.button {
+    -fx-border-color: white;
+    -fx-border-radius: 60px;
+    -fx-border-width: 2px;
+    -fx-background-color: transparent;
+    -fx-background-radius: 60px;
+    -fx-text-fill: white;
+}
+
+.button:pressed {
+    -fx-border-color: gray;
+    -fx-background-color: lightgray;
+    -fx-text-fill: black;
+    -fx-effect: none;
+}
+
+.circle-button-white {
+    -fx-background-color: white;
+    -fx-background-radius: 40px;
+    -fx-text-fill: black;
+    -fx-pref-width: 70px;
+    -fx-pref-height: 70px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 50, 0, 0, 0);
+}
+
+.circle-button-white:selected {
+    -fx-text-fill: white;
+    -fx-background-color: #0077CC;
+    -fx-effect: none;
+}
+
+.button-menu {
+    -fx-background-radius: 40px;
+    -fx-background-color: white;
+    -fx-pref-height: 70px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 50, 0, 0, 0);
+}
+
+.button-menu .button {
+    -fx-text-fill: black;
+    -fx-border-color: gray;
+    -fx-border-radius: 40px;
+}
